@@ -75,8 +75,10 @@ class RolePlayServiceImplTest {
 
   @Test
   void updateRolePlayShouldThrowNotFoundExceptionWhenGivenIdOfNotExistingRolePlay() {
+	// given
+	final RolePlay cthulhuRolePlay = new RolePlay(null, CTHULHU_ROLE_PLAY_NAME, Genre.HORROR, Complexity.MEDIUM);
     // when then
-    assertThrows(NotFoundException.class, () -> underTest.getRolePlay(UNKNOWN_ROLE_PLAY_ID));
+    assertThrows(NotFoundException.class, () -> underTest.updateRolePlay(UNKNOWN_ROLE_PLAY_ID, cthulhuRolePlay));
   }
 
   @Test
