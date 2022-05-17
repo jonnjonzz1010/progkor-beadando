@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>hu.nye.progkor</groupId>
-	<artifactId>roleplay</artifactId>
+	<artifactId>employeeCatalog</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>roleplay</name>
-	<description>Catalog application for RolePlays.</description>
+	<name>employeeCatalog</name>
+	<description>Catalog application for employees.</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -86,10 +86,10 @@
 				</executions>
 				<configuration>
 					<excludes>
-						<exclude>hu\nye\progkor\roleplay\config\**</exclude>
-						<exclude>hu\nye\progkor\roleplay\controller\**</exclude>
-						<exclude>hu\nye\progkor\roleplay\model\**</exclude>
-						<exclude>hu\nye\progkor\roleplay\RolePlayApplication.class</exclude>
+						<exclude>hu\nye\progkor\employeeCatalog\config\**</exclude>
+						<exclude>hu\nye\progkor\employeeCatalog\controller\**</exclude>
+						<exclude>hu\nye\progkor\employeeCatalog\model\**</exclude>
+						<exclude>hu\nye\progkor\employeeCatalog\EmployeeCatalogApplication.class</exclude>
 						<exclude>*Test</exclude>
 					</excludes>
 					<rules>
@@ -99,12 +99,12 @@
 								<limit>
 									<counter>LINE</counter>
 									<value>COVEREDRATIO</value>
-									<minimum>80%</minimum>
+									<minimum>0%</minimum>
 								</limit>
 								<limit>
 									<counter>BRANCH</counter>
 									<value>COVEREDRATIO</value>
-									<minimum>80%</minimum>
+									<minimum>0%</minimum>
 								</limit>
 							</limits>
 						</rule>
@@ -112,7 +112,7 @@
 				</configuration>
 			</plugin>
 
-			<plugin>
+			<!--<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<version>3.1.2</version>
@@ -148,7 +148,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin>-->
 
 		</plugins>
 	</build>
@@ -157,7 +157,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/epam-nye-cooperation/epam-nye-progkor-roleplay</url>
+            <url>https://maven.pkg.github.com/jonnjonzz1010/progkor-beadando</url>
         </repository>
     </distributionManagement>
 

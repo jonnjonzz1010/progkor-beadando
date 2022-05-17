@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>RolePlay Creating form</title>
+    <title>Employee Creating form</title>
 
     <link rel="stylesheet"
           th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}"/>
@@ -16,14 +16,14 @@
 
 <div class="container">
 
-    <h3 class="pt-5">Szerepjáték létrehozás</h3>
+    <h3 class="pt-5">SDolgozó létrehozás</h3>
 
        <div class="row">
         <div class="col-md-4 mt-5">
             <form method="post"
-                  th:action="@{/role-play/create}">
+                  th:action="@{/employee/create}">
                 <div class="form-group">
-                    <label for="name">Szerepjáték készítő form</label>
+                    <label for="name">Dolgozó készítő form</label>
                 </div>
                 <div class="form-group">
                     <label for="name">ID</label>
@@ -43,26 +43,26 @@
                            />
                 </div>
                 <div class="form-group">
-                    <label for="genre">Kategória</label>
+                    <label for="gender">Nem</label>
                     <input type="text"
-                           id="genre"
-                           name="genre"
+                           id="gender"
+                           name="gender"
                            class="form-control"
                           />
                 </div>
                 <div class="form-group">
-                    <label for="complexity">Nehézség</label>
+                    <label for="departments">Város</label>
                     <input type="text"
-                           id="complexity"
-                           name="complexity"
+                           id="departments"
+                           name="departments"
                            class="form-control"
                            />
                 </div>
 
                 <button class="btn btn-primary pt-2 mt-2"
-                        type="submit">Szerepjáték készítés
+                        type="submit">Dolgozó készítés
                 </button>
-                <a th:href="@{/role-play/create}"
+                <a th:href="@{/employee/create}"
                    class="btn btn-secondary pt-2 mt-2"
                    type="submit">Mégsem</a>
             </form>

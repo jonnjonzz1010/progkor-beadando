@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Szerepjátékok listája</title>
+    <title>Dolgozók listája</title>
 
     <link rel="stylesheet"
           th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}"/>
@@ -15,35 +15,35 @@
 <body>
 
 <div class="container">
-    <h3 class="pt-5">Szerepjátékok listája</h3>
+    <h3 class="pt-5">Dolgozók listája</h3>
 
-    <a th:href="@{/role-play/create}"
+    <a th:href="@{/employee/create}"
        type="button"
-       class="btn btn-info">Új szerepjáték hozzá adása</a>
+       class="btn btn-info">Új dolgozó hozzáadása</a>
 
     <table class="table table-striped pt-5">
-        <caption>Szerepjátékok listája</caption>
+        <caption>Dolgozók listája</caption>
         <thread>
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Név</th>
-                <th scope="col">Kategória</th>
-                <th scope="col">Nehézség</th>
+                <th scope="col">Nem</th>
+                <th scope="col">Város</th>
                 <th scope="col">Műveletek</th>
             </tr>
         </thread>
         <tbody>
-        <tr th:each="rolePlay: ${rolePlays}">
+        <tr th:each="employee: ${employees}">
             <th scope="row"
-                th:text="${rolePlay.id}"></th>
-            <td th:text="${rolePlay.name}"></td>
-            <td th:text="${rolePlay.genre}"></td>
-            <td th:text="${rolePlay.complexity}"></td>
+                th:text="${employee.id}"></th>
+            <td th:text="${employee.name}"></td>
+            <td th:text="${employee.gender}"></td>
+            <td th:text="${employee.departments}"></td>
             <td>
-                <a th:href="@{'/role-play/' + ${rolePlay.id}}"
+                <a th:href="@{'/employee/' + ${employee.id}}"
                    type="button"
                    class="btn btn-warning">Szerkesztés</a>
-                <a th:href="@{'/role-play/' + ${rolePlay.id} +  '/delete'}"
+                <a th:href="@{'/employee/' + ${employee.id} +  '/delete'}"
                    type="button"
                    class="btn btn-danger">Törlés</a>
             </td>
